@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס יצירת טיוטות Outlook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>טופס יצירת טיוטות Outlook</h1>
+
+    <form id="emailForm">
+        <!-- שדה נושא המייל -->
+        <label for="subject">נושא המייל:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <!-- שדה כתובת/ות נמענים -->
+        <label for="recipients">כתובת/ות נמענים (מופרדות בפסיק):</label>
+        <input type="text" id="recipients" name="recipients" required>
+
+        <!-- שדה גוף ההודעה -->
+        <label for="body">גוף ההודעה:</label>
+        <textarea id="body" name="body" rows="6" required></textarea>
+
+        <!-- שדה קובץ מצורף -->
+        <label for="attachment">קובץ מצורף:</label>
+        <input type="file" id="attachment" name="attachment">
+
+        <!-- כפתור שליחה -->
+        <button type="submit">שליחה</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
